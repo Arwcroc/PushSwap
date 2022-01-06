@@ -6,7 +6,7 @@
 /*   By: tefroiss <tefroiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 13:41:19 by tefroiss          #+#    #+#             */
-/*   Updated: 2021/12/22 16:23:40 by tefroiss         ###   ########.fr       */
+/*   Updated: 2022/01/06 17:21:08 by tefroiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	ft_freee(char **tab)
 {
 	int	i;
 
-	i = 0;
-	while (tab[i])
-		free(tab[i++]);
+	i = -1;
+	while (tab[++i])
+		free(tab[i]);
 	free(tab);
 	return (0);
 }

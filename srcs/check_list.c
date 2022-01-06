@@ -6,7 +6,7 @@
 /*   By: tefroiss <tefroiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/17 15:02:04 by tefroiss          #+#    #+#             */
-/*   Updated: 2021/12/22 16:39:06 by tefroiss         ###   ########.fr       */
+/*   Updated: 2022/01/06 17:24:54 by tefroiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	ft_isdigit(char *str)
 	return (0);
 }
 
-int	check_arg(char **arg)
+int	check_arg(char **arg, int ac)
 {
 	int	i;
 
@@ -67,7 +67,11 @@ int	check_arg(char **arg)
 	while (arg[i])
 	{
 		if (check_limit_int(arg[i]) || ft_isdigit(arg[i]))
+		{
+			if (ac == 2)
+				ft_freee(arg);
 			return (1);
+		}
 		i++;
 	}
 	return (0);

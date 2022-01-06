@@ -6,7 +6,7 @@
 /*   By: tefroiss <tefroiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 00:24:39 by tefroiss          #+#    #+#             */
-/*   Updated: 2021/12/27 00:24:50 by tefroiss         ###   ########.fr       */
+/*   Updated: 2022/01/06 18:08:46 by tefroiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@ void	r_rotate(t_list **list, char c)
 		return ;
 	*list = (*list)->prev;
 	if (c == 'a')
-		printf("rra\n");
+		write(1, "rra\n", 4);
 	else if (c == 'b')
-		printf("rrb\n");
+		write(1, "rrb\n", 4);
 }
 
 void	r_rotate_r(t_list *lista, t_list *listb)
 {
 	r_rotate(&lista, 'x');
 	r_rotate(&listb, 'x');
-	printf("rrr\n");
+	write(1, "rrr\n", 4);
 }
 
 void	rotate(t_list **list, char c)
@@ -36,14 +36,14 @@ void	rotate(t_list **list, char c)
 		return ;
 	*list = (*list)->next;
 	if (c == 'a')
-		printf("ra\n");
+		write(1, "ra\n", 3);
 	else if (c == 'b')
-		printf("rb\n");
+		write(1, "rb\n", 3);
 }
 
 void	rotate_r(t_list *lista, t_list *listb)
 {
 	r_rotate(&lista, 'x');
 	r_rotate(&listb, 'x');
-	printf("rr\n");
+	write(1, "rr\n", 3);
 }

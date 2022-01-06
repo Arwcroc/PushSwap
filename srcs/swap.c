@@ -6,7 +6,7 @@
 /*   By: tefroiss <tefroiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 16:31:13 by tefroiss          #+#    #+#             */
-/*   Updated: 2021/12/27 00:26:11 by tefroiss         ###   ########.fr       */
+/*   Updated: 2022/01/06 18:07:35 by tefroiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void	swap(t_list **stack, char c)
 	(*stack)->prev = tmp;
 	(*stack) = tmp;
 	if (c == 'a')
-		printf("sa\n");
+		write(1, "sa\n", 3);
 	else if (c == 'b')
-		printf("sb\n");
+		write(1, "sb\n", 3);
 }
 
 void	push_swaperoo(t_list **stack_two, t_list **prev_tmp)
@@ -65,9 +65,9 @@ void	pushfive(t_list **receive, t_list **send, char c)
 	else
 		ft_list_pfront(receive, tmp);
 	if (c == 'a')
-		printf("pa\n");
+		write(1, "pa\n", 3);
 	else if (c == 'b')
-		printf("pb\n");
+		write(1, "pb\n", 3);
 }
 
 void	push(t_list **receive, t_list **send, char c)
@@ -89,7 +89,7 @@ void	push(t_list **receive, t_list **send, char c)
 	else
 		ft_list_push_front(receive, tmp);
 	if (c == 'a')
-		printf("pa\n");
+		write(1, "pa\n", 3);
 	else if (c == 'b')
-		printf("pb\n");
+		write(1, "pb\n", 3);
 }

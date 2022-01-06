@@ -6,7 +6,7 @@
 /*   By: tefroiss <tefroiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 19:44:26 by tefroiss          #+#    #+#             */
-/*   Updated: 2021/12/27 00:43:49 by tefroiss         ###   ########.fr       */
+/*   Updated: 2022/01/06 17:24:50 by tefroiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void		push(t_list **receive, t_list **send, char c);
 int			check_sort(t_list *list);
 int			check_limit_int(char *str);
 int			ft_isdigit(char *str);
-int			check_arg(char **arg);
+int			check_arg(char **arg, int ac);
 int			ft_double(char **arg);
 
 void		sort_stack(t_list **lista, t_list **listb);

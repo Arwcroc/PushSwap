@@ -6,7 +6,7 @@
 /*   By: tefroiss <tefroiss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 16:17:49 by tefroiss          #+#    #+#             */
-/*   Updated: 2021/12/22 16:42:08 by tefroiss         ###   ########.fr       */
+/*   Updated: 2022/01/06 18:03:20 by tefroiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,9 @@ int	main(int ac, char **av)
 	arg = ft_get_argv(ac, av);
 	if (!(*arg) || !(**arg))
 		exit (EXIT_FAILURE);
-	else if (check_arg(arg))
+	else if (check_arg(arg, ac))
 	{
-		fprintf(stderr, "Error\n");
+		write(1, "Error\n", 6);
 		exit (EXIT_FAILURE);
 	}
 	i = -1;
