@@ -63,6 +63,7 @@ int			get_highest(t_list *b);
 void		which_sort(t_list **lista, t_list **listb, int size);
 
 char		**ft_split(char const *str, char c);
+int			ft_freee(char **tab);
 
 char		**ft_get_argv(int ac, char **av);
 int			ft_strcmp(char *s1, char *s2);

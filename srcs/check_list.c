@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 int	check_sort(t_list *list)
 {
@@ -91,10 +91,7 @@ int	ft_double(char **arg)
 		while (arg[j])
 		{
 			if (!ft_strcmp(arg[i], arg[j]))
-			{
-				printf("Multiple time same number -> %s\n", arg[i]);
 				return (1);
-			}
 			j++;
 		}
 		i++;

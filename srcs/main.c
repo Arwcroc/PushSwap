@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
 int	get_lowest(t_list *a)
 {
@@ -83,16 +83,17 @@ int	main(int ac, char **av)
 		exit (EXIT_FAILURE);
 	else if (check_arg(arg))
 	{
-		fprintf(stderr, "ERROR\n");
+		fprintf(stderr, "Error\n");
 		exit (EXIT_FAILURE);
 	}
-	i = 0;
-	while (arg[i])
-		i++;
+	i = -1;
+	while (arg[++i])
+		listb = NULL;
 	lista = list_init(arg, i);
-	listb = NULL;
 	which_sort(&lista, &listb, i);
 	ft_listclear(&lista);
 	ft_listclear(&listb);
+	if (ac == 2)
+		ft_freee(arg);
 	exit (EXIT_SUCCESS);
 }

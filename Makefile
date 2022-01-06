@@ -28,19 +28,19 @@ OBJS		=	$(SRCS:.c=.o)
 
 CC			=	clang
 
-CFLAGS		+=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror ${INCLUDES}
 
 RM			=	rm -f
 
 CLEAN		=	clean
 
-INCLUDES	=	./includes/push_swap.h
+INCLUDES	=	-I ./includes/
 
 #########################################################################################
 #										MAKE											#
 #########################################################################################
 
-%.o			:	%.c ${INCLUDES}
+%.o			:	%.c
 				$(CC) $(CFLAGS) -c $< -o $@
 
 all			:	$(NAME)
